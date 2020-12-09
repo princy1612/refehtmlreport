@@ -31,7 +31,7 @@ bat ' npm install jasmine-node'
     }
    stage("execution of test code")
     {
-   //  bat '''cd C:\\Users\\40010003\\Desktop\\JS-Jasmineminiproject-main\\Jasmine Frame Work
+  
 //npx jasmine init'''
       
 bat '''cd C:\\Users\\40010003\\Desktop\\JS-Jasmineminiproject-main\\Jasmine Frame Work
