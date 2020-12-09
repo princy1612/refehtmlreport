@@ -2,7 +2,7 @@
 node{
   
     stage('test advance script') {
-checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'adf05bd0-541b-40d0-b33f-a6aae4f95c10', url: 'https://github.com/princy1612/htmlreport.git']]])
+checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'adf05bd0-541b-40d0-b33f-a6aae4f95c10', url: 'https://github.com/princy1612/refehtmlreport.git']]])
        echo " SERVICE_NAME = 'html report'"
             echo "current build number: ${currentBuild.number}"
             echo "previous build number: ${currentBuild.previousBuild.getNumber()}"
@@ -10,7 +10,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleCon
     }
     stage("checkuot")
     {
-checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'adf05bd0-541b-40d0-b33f-a6aae4f95c10', url: 'https://github.com/princy1612/htmlreport.git']]])
+checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'adf05bd0-541b-40d0-b33f-a6aae4f95c10', url: 'https://github.com/princy1612/refehtmlreport.git']]])
 bat 'npm install'
     }
     stage("execution of code")
