@@ -28,7 +28,7 @@ bat 'npm install'
   stage("exexute the jasmine")
   {
      checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'adf05bd0-541b-40d0-b33f-a6aae4f95c10', url: 'https://github.com/princy1612/refehtmlreport.git']]])
-    bat'''   npx jasmine spec/bank.js '''
+    bat'''   npx jasmine Spec/bank.js '''
     
     stage("html report")
     {
