@@ -15,24 +15,24 @@ bat 'npm install'
     }
     stage("execution of code")
     {
-     bat'''cd C:\\Users\\40010003\\Desktop\\JS-Jasmineminiproject-main\\Jasmine Frame Work\\src
-      node  Bank.js '''
+     checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'adf05bd0-541b-40d0-b33f-a6aae4f95c10', url: 'https://github.com/princy1612/refehtmlreport.git']]])
+     bat ' node  Bank.js '
    
              
     }
 
    stage("installation of jasmine")
     {
-        bat ''' cd C:\\Users\\40010003\\Desktop\\JS-Jasmineminiproject-main\\Jasmine Frame Work
- npm install jasmine-node
+       checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'adf05bd0-541b-40d0-b33f-a6aae4f95c10', url: 'https://github.com/princy1612/refehtmlreport.git']]])
+bat ' npm install jasmine-node'
+      bat ' npx jasmine init '
 
- '''
       
     }
    stage("execution of test code")
     {
-     bat '''cd C:\\Users\\40010003\\Desktop\\JS-Jasmineminiproject-main\\Jasmine Frame Work
-npx jasmine init'''
+   //  bat '''cd C:\\Users\\40010003\\Desktop\\JS-Jasmineminiproject-main\\Jasmine Frame Work
+//npx jasmine init'''
       
 bat '''cd C:\\Users\\40010003\\Desktop\\JS-Jasmineminiproject-main\\Jasmine Frame Work
 npx jasmine Spec/bank.js'''
